@@ -29,18 +29,18 @@ for (let vehicle of myVehicles) {
 //add new property " needRepair" bike and skateboard
 bike.needsRepair = true;
 skateboard.needsRepair = true;
-//console.log(bike, skateboard);
+console.log(bike, skateboard);
 
 //create click event to button element
-button.addEventListener("click", function(){
-    repairList.innerHTML = ""; //text would be cleared each time button is clicked
-    const vehicleRepairList = [myVehicles.needsRepair];
+button.addEventListener("click", function () {
+  repairList.innerHTML = ""; //text would be cleared each time button is clicked
+  const vehicleRepairList = myVehicles.filter(function(vehicle){
+      return vehicle.needsRepair === true;
+  })
 
-    for ()
-
-
-})
-
-const vehicleRepairList = [myVehicles[key]];
-console.log(vehicleRepairList);
-
+  for (let vehicle of vehicleRepairList) {
+    let li = document.createElement("li");
+    li.innerHTML = `My <span class = "vehicle"> ${vehicle.type} </span> needs some ❤️`;
+    repairList.append(li);
+  }
+});
