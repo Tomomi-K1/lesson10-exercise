@@ -1,3 +1,7 @@
+const button = document.querySelector("button");
+const repairList = document.querySelector(".need-repair");
+//console.log(button, repairList);
+
 const createVehicle = function(type, numWheels, color){
     const vehicle = {
         type: type,
@@ -21,4 +25,22 @@ for (let vehicle of myVehicles) {
     for(let key in vehicle)
      console.log(key, vehicle[key]);
     };
+
+//add new property " needRepair" bike and skateboard
+bike.needsRepair = true;
+skateboard.needsRepair = true;
+//console.log(bike, skateboard);
+
+//create click event to button element
+button.addEventListener("click", function(){
+    repairList.innerHTML = ""; //text would be cleared each time button is clicked
+    const vehicleRepairList = [myVehicles.needsRepair];
+
+    for ()
+
+
+})
+
+const vehicleRepairList = [myVehicles[key]];
+console.log(vehicleRepairList);
 
